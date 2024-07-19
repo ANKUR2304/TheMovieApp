@@ -5,6 +5,7 @@ import android.widget.ImageView;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.databinding.BindingAdapter;
+import androidx.databinding.library.baseAdapters.BR;
 
 import java.util.List;
 

@@ -45,5 +45,7 @@ public class MovieRepository {
 
             }
         });
+
+        return mutableLiveData;
     }
 }
