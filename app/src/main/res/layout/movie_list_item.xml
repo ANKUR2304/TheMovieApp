@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="movie"
+            type="com.example.themovieapp.model.Movie"
+            />
+
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,6 +38,7 @@
                     android:id="@+id/imageViewMovie"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
+                    bind:posterPath="@{movie.posterPath}"
                     android:scaleType="fitXY"
                     />
 
@@ -35,6 +46,7 @@
                     android:id="@+id/movieTitleTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="@{movie.title}"
                     android:layout_below="@id/imageViewMovie"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
@@ -47,6 +59,7 @@
                     android:id="@+id/movieRatingTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:text="@{Double.toString(movie.voteAverage)}"
                     android:layout_below="@id/movieTitleTV"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
