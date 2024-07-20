@@ -1,6 +1,9 @@
 plugins {
     alias(libs.plugins.androidApplication)
+    id("dagger.hilt.android.plugin")
 }
+
+
 
 android {
     namespace = "com.example.themovieapp"
@@ -54,11 +57,18 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
 
     // Paging Library
-    // implementation("androidx.paging:paging-runtime:3.1.0")
+    implementation("androidx.paging:paging-runtime:3.1.1")
+
+    //RxJava support
+    implementation("androidx.paging:paging-rxjava3:3.1.1")
 
     // ViewModel
-    // implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
 
     // LiveData
-    // implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+
+    // Dagger Hilt
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    annotationProcessor("com.google.dagger:hilt-compiler:2.51.1")
 }
